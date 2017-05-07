@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OrchidBot.Properties" GeneratedClassName="Settings">
+	<Profiles />
+	<Settings>
+		<Setting Name="MantisUser" Type="System.String" Scope="Application">
+			<Value Profile="(Default)"></Value>
+		</Setting>
+		<Setting Name="MantisPassword" Type="System.String" Scope="Application">
+			<Value Profile="(Default)"></Value>
+		</Setting>
+		<Setting Name="SlackAPIKey" Type="System.String" Scope="Application">
+			<Value Profile="(Default)"></Value>
+		</Setting>
+		<Setting Name="MantisUrl" Type="System.String" Scope="Application">
+			<Value Profile="(Default)"></Value>
+		</Setting>
+		<Setting Name="MantisBugRegex" Type="System.String" Scope="Application">
+			<Value Profile="(Default)">\#[0-9]+</Value>
+		</Setting>
+	</Settings>
+</SettingsFile>
