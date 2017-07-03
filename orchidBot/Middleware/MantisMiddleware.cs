@@ -31,7 +31,7 @@ namespace OrchidBot.Middleware
                     ValidHandles = new []{ "" },
                     Description = "",
                     EvaluatorFunc = PhrasingHandler,
-                    ShouldContinueProcessing = false
+                    ShouldContinueProcessing = true
                 },
             };
         }

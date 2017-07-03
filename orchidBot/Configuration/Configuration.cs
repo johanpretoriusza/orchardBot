@@ -9,6 +9,7 @@ namespace OrchidBot.Configuration
         {
             UseMiddleware<InfoMiddleware>();
             UseMiddleware<MantisMiddleware>();
+            UseMiddleware<SassMiddleware>();
         }
     }
 }

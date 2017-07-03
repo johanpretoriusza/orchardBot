@@ -106,6 +106,7 @@
     </Compile>
     <Compile Include="Middleware\InfoMiddleware.cs" />
     <Compile Include="Middleware\MantisMiddleware.cs" />
+    <Compile Include="Middleware\SassMiddleware.cs" />
     <Compile Include="orchidBotHost.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
