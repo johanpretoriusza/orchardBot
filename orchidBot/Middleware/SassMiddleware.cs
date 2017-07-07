@@ -74,7 +74,6 @@ namespace OrchidBot.Middleware
                         yield return message.ReplyToChannel("I'm Batman");
                         break;
                 }
-
             }
             if (message.RawText.ToLower().Contains("fok"))
             {
@@ -86,7 +85,7 @@ namespace OrchidBot.Middleware
             }
             if (message.RawText.ToLower().Contains("help"))
             {
-                var val_help = rand.Next(7);
+                var val_help = rand.Next(20);
                 switch (val_help)
                 {
                     case 0:
@@ -109,14 +108,17 @@ namespace OrchidBot.Middleware
                         yield return message.ReplyToChannel("`tada dum ta dum to the rescue`");
                         break;
 
-                    default:
+                    case 5:
                         yield return message.ReplyToChannel("I'm the Dark Night");
+                        break;
+
+                    default:
                         break;
                 }
             }
             if (message.RawText.ToLower().Contains("broken"))
             {
-                var val_broken = rand.Next(7);
+                var val_broken = rand.Next(15);
                 switch (val_broken)
                 {
                     case 0:
@@ -135,14 +137,17 @@ namespace OrchidBot.Middleware
                         yield return message.ReplyToChannel("`What, have you tested it more than once.?`");
                         break;
 
-                    default:
+                    case 4:
                         yield return message.ReplyToChannel("`Ticket Number??`");
+                        break;
+
+                    default:
                         break;
                 }
             }
             if (message.RawText.ToLower().Contains("hi"))
             {
-                var val_greetings = rand.Next(7);
+                var val_greetings = rand.Next(15);
                 switch (val_greetings)
                 {
                     case 0:
@@ -156,10 +161,13 @@ namespace OrchidBot.Middleware
                     case 2:
                         yield return message.ReplyToChannel("Sup Butt ugly :yum:");
                         break;
-                    default:
+
+                    case 3:
                         yield return message.ReplyToChannel(":face_with_rolling_eyes:");
                         break;
 
+                    default:
+                        break;
                 }
             }
             if (message.RawText.ToLower().Contains("sup"))
@@ -178,10 +186,13 @@ namespace OrchidBot.Middleware
                     case 2:
                         yield return message.ReplyToChannel("Butt ugly in da house :yum:");
                         break;
-                    default:
+
+                    case 3:
                         yield return message.ReplyToChannel(":face_with_rolling_eyes:");
                         break;
 
+                    default:
+                        break;
                 }
             }
             if (message.RawText.ToLower().Contains("werk nie"))
@@ -206,13 +217,9 @@ namespace OrchidBot.Middleware
                         break;
 
                     default:
-                        yield return message.ReplyToChannel("`you are still butt ugly?`");
                         break;
                 }
             }
         }
     }
 }
-    
-
-
