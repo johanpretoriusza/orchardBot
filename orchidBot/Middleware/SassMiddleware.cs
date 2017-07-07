@@ -41,7 +41,7 @@ namespace OrchidBot.Middleware
                 }
                 else if (rand.Next(500) == 0)
                 {
-                    yield return message.ReplyDirectlyToUser("I'm Batman");
+                    yield return message.ReplyDirectlyToUser("Why so serious?");
                 }
             }
             if ((message.BotIsMentioned && message.RawText.ToLower().Contains("alive") && message.ChannelType == ResponseType.Channel) ||
@@ -74,7 +74,145 @@ namespace OrchidBot.Middleware
                         yield return message.ReplyToChannel("I'm Batman");
                         break;
                 }
+
+            }
+            if (message.RawText.ToLower().Contains("fok"))
+            {
+                yield return message.ReplyToChannel("`Hey!!! Watch your language`");
+            }
+            if (message.RawText.ToLower().Contains("fuck"))
+            {
+                yield return message.ReplyToChannel("`Hey!!! Watch your language`");
+            }
+            if (message.RawText.ToLower().Contains("help"))
+            {
+                var val_help = rand.Next(7);
+                switch (val_help)
+                {
+                    case 0:
+                        yield return message.ReplyToChannel("`Depends on what you need help with, but let me call Alfred instead`");
+                        break;
+
+                    case 1:
+                        yield return message.ReplyToChannel("`mmmmmmm I assume you think this is google right??`");
+                        break;
+
+                    case 2:
+                        yield return message.ReplyToChannel("`Madness, as you know, is like gravity, all it takes is a little push.`");
+                        break;
+
+                    case 3:
+                        yield return message.ReplyToChannel("`Everyone needs this is Gotham!!!`");
+                        break;
+
+                    case 4:
+                        yield return message.ReplyToChannel("`tada dum ta dum to the rescue`");
+                        break;
+
+                    default:
+                        yield return message.ReplyToChannel("I'm the Dark Night");
+                        break;
+                }
+            }
+            if (message.RawText.ToLower().Contains("broken"))
+            {
+                var val_broken = rand.Next(7);
+                switch (val_broken)
+                {
+                    case 0:
+                        yield return message.ReplyToChannel("Well,Well thinking that shit will always just work? this isn't Wayne Enterprises!!!");
+                        break;
+
+                    case 1:
+                        yield return message.ReplyToChannel("`Let me know, I can organise you some concrete with that`");
+                        break;
+
+                    case 2:
+                        yield return message.ReplyToChannel("`Maybe you are just butt ugly?`");
+                        break;
+
+                    case 3:
+                        yield return message.ReplyToChannel("`What, have you tested it more than once.?`");
+                        break;
+
+                    default:
+                        yield return message.ReplyToChannel("`Ticket Number??`");
+                        break;
+                }
+            }
+            if (message.RawText.ToLower().Contains("hi"))
+            {
+                var val_greetings = rand.Next(7);
+                switch (val_greetings)
+                {
+                    case 0:
+                        yield return message.ReplyToChannel("Welcome ");
+                        break;
+
+                    case 1:
+                        yield return message.ReplyToChannel("`What do you wwaaaannnttt????`");
+                        break;
+
+                    case 2:
+                        yield return message.ReplyToChannel("Sup Butt ugly :yum:");
+                        break;
+                    default:
+                        yield return message.ReplyToChannel(":face_with_rolling_eyes:");
+                        break;
+
+                }
+            }
+            if (message.RawText.ToLower().Contains("sup"))
+            {
+                var val_greetings = rand.Next(7);
+                switch (val_greetings)
+                {
+                    case 0:
+                        yield return message.ReplyToChannel("Yo Yo");
+                        break;
+
+                    case 1:
+                        yield return message.ReplyToChannel("`Sup m8`");
+                        break;
+
+                    case 2:
+                        yield return message.ReplyToChannel("Butt ugly in da house :yum:");
+                        break;
+                    default:
+                        yield return message.ReplyToChannel(":face_with_rolling_eyes:");
+                        break;
+
+                }
+            }
+            if (message.RawText.ToLower().Contains("werk nie"))
+            {
+                var val_broken = rand.Next(7);
+                switch (val_broken)
+                {
+                    case 0:
+                        yield return message.ReplyToChannel("Well,Well thinking that shit will always just work? this isn't Wayne Enterprises!!!");
+                        break;
+
+                    case 1:
+                        yield return message.ReplyToChannel("`Let me know, I can organise you some concrete with that`");
+                        break;
+
+                    case 2:
+                        yield return message.ReplyToChannel("`Maybe you are just butt ugly?`");
+                        break;
+
+                    case 3:
+                        yield return message.ReplyToChannel("`What, have you tested it more than once.?`");
+                        break;
+
+                    default:
+                        yield return message.ReplyToChannel("`you are still butt ugly?`");
+                        break;
+                }
             }
         }
     }
 }
+    
+
+
