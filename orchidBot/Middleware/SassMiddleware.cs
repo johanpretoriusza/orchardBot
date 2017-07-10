@@ -83,6 +83,14 @@ namespace OrchidBot.Middleware
             {
                 yield return message.ReplyToChannel("`Hey!!! Watch your language`");
             }
+            if (message.RawText.ToLower().Contains("fec"))
+            {
+                yield return message.ReplyToChannel("`Hey!!! no cheating, watch your language`");
+                if (message.RawText.ToLower().Contains("#fec"))
+                {
+                    yield return message.ReplyToChannel("`Hey!!! no cheating, watch your language`");
+                }
+            }
             if (message.RawText.ToLower().Contains("help"))
             {
                 var val_help = rand.Next(20);
