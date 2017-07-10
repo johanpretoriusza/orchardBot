@@ -31,6 +31,7 @@ namespace OrchidBot.Middleware
 
         private static Random rand = new Random();
 
+        //Random time reponds to a user or channel
         private IEnumerable<ResponseMessage> SassHandler(IncomingMessage message, string matchedHandle)
         {
             var commandsList = new List<string>();
@@ -45,6 +46,7 @@ namespace OrchidBot.Middleware
                     yield return message.ReplyDirectlyToUser("Why so serious?");
                 }
             }
+            //Call the bot to check if its still alive and responding to your messages using alive statements
             if ((message.BotIsMentioned && message.RawText.ToLower().Contains("alive") && message.ChannelType == ResponseType.Channel) ||
                 (message.RawText.ToLower().Contains("alive") && message.ChannelType == ResponseType.DirectMessage))
             {
@@ -76,6 +78,7 @@ namespace OrchidBot.Middleware
                         break;
                 }
             }
+            //Language check in a channel where the bot is active
             if (message.RawText.ToLower().Contains("fok"))
             {
                 yield return message.ReplyToChannel("`Hey!!! Watch your language`");
@@ -93,6 +96,7 @@ namespace OrchidBot.Middleware
                     yield return message.ReplyToChannel("`Hey!!! no cheating, watch your language`");
                
             }
+                //Chirping when someone needs help
             if (message.RawText.ToLower().Contains("help"))
             {
                 var val_help = rand.Next(20);
@@ -126,6 +130,7 @@ namespace OrchidBot.Middleware
                         break;
                 }
             }
+            //Chirping when someone said something is broken
             if (message.RawText.ToLower().Contains("broken"))
             {
                 var val_broken = rand.Next(15);
@@ -155,6 +160,7 @@ namespace OrchidBot.Middleware
                         break;
                 }
             }
+            //Bot will greet randomly from time to time, when using Hi in the channel
             if (message.RawText.ToLower().Contains("hi"))
             {
                 var val_greetings = rand.Next(15);
@@ -180,6 +186,7 @@ namespace OrchidBot.Middleware
                         break;
                 }
             }
+            //Bot will greet randomly from time to time, when using Hi in the channel
             if (message.RawText.ToLower().Contains("sup"))
             {
                 var val_greetings = rand.Next(7);
@@ -205,6 +212,7 @@ namespace OrchidBot.Middleware
                         break;
                 }
             }
+            //Chirping when someone said something is broken
             if (message.RawText.ToLower().Contains("werk nie"))
             {
                 var val_broken = rand.Next(7);
