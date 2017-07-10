@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Noobot.Core.MessagingPipeline.Middleware;
+using Noobot.Core.MessagingPipeline.Request;
+using Noobot.Core.MessagingPipeline.Response;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
