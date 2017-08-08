@@ -46,6 +46,11 @@ namespace OrchidBot.Middleware
                     yield return message.ReplyDirectlyToUser("Why so serious?");
                 }
             }
+            else if (rand.Next(250) == 0)
+            {
+                yield return message.ReplyDirectlyToUser("http://imgur.com/a/kh8wc");
+
+        }
             //Call the bot to check if its still alive and responding to your messages using alive statements
             if ((message.BotIsMentioned && message.RawText.ToLower().Contains("alive") && message.ChannelType == ResponseType.Channel) ||
                 (message.RawText.ToLower().Contains("alive") && message.ChannelType == ResponseType.DirectMessage))
@@ -82,6 +87,10 @@ namespace OrchidBot.Middleware
             if (message.RawText.ToLower().Contains("fok"))
             {
                 yield return message.ReplyToChannel("`Hey!!! Watch your language`");
+            }
+            if (message.RawText.ToLower().Contains("meme me"))
+            {
+                yield return message.ReplyToChannel("http://imgur.com/a/kh8wc");
             }
             if (message.RawText.ToLower().Contains("fuck"))
             {
@@ -237,6 +246,7 @@ namespace OrchidBot.Middleware
                     default:
                         break;
                 }
+
             }
         }
     }
