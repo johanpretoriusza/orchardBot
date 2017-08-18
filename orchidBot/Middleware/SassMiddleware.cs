@@ -2,12 +2,9 @@
 using Noobot.Core.MessagingPipeline.Middleware;
 using Noobot.Core.MessagingPipeline.Request;
 using Noobot.Core.MessagingPipeline.Response;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Common.Logging;
+using RestSharp.Extensions;
 
 namespace OrchidBot.Middleware
 {
@@ -52,8 +49,8 @@ namespace OrchidBot.Middleware
                 yield return message.ReplyDirectlyToUser("http://imgur.com/a/kh8wc");
 
             }
-            //Call the bot to check if its still alive and responding to your messages using alive statements
-            if ((message.BotIsMentioned && message.RawText.ToLower().Contains("alive") && message.ChannelType == ResponseType.Channel) ||
+                //Call the bot to check if its still alive and responding to your messages using alive statements
+                if ((message.BotIsMentioned && message.RawText.ToLower().Contains("alive") && message.ChannelType == ResponseType.Channel) ||
                 (message.RawText.ToLower().Contains("alive") && message.ChannelType == ResponseType.DirectMessage))
             {
                 var val = rand.Next(7);
@@ -305,9 +302,7 @@ namespace OrchidBot.Middleware
                         break;
                 }
             }
-
         }
     }
 }
-
 

@@ -104,6 +104,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Middleware\WeatherMiddleware.cs" />
     <Compile Include="Middleware\InfoMiddleware.cs" />
     <Compile Include="Middleware\MantisMiddleware.cs" />
     <Compile Include="Middleware\SassMiddleware.cs" />
@@ -184,6 +185,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\Collections\Generic\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
