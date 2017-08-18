@@ -13,6 +13,7 @@ namespace OrchidBot.Middleware
 {
     public class SassMiddleware : MiddlewareBase
     {
+        DateTime thisDay = DateTime.Today;
         private static readonly ILog Log = LogManager.GetLogger<OrchidBotHost>();
 
         public SassMiddleware(IMiddleware next) : base(next)
@@ -50,7 +51,7 @@ namespace OrchidBot.Middleware
             {
                 yield return message.ReplyDirectlyToUser("http://imgur.com/a/kh8wc");
 
-        }
+            }
             //Call the bot to check if its still alive and responding to your messages using alive statements
             if ((message.BotIsMentioned && message.RawText.ToLower().Contains("alive") && message.ChannelType == ResponseType.Channel) ||
                 (message.RawText.ToLower().Contains("alive") && message.ChannelType == ResponseType.DirectMessage))
@@ -100,12 +101,12 @@ namespace OrchidBot.Middleware
             {
                 yield return message.ReplyToChannel("`Hey!!! no cheating, watch your language`");
             }
-                if (message.RawText.ToLower().Contains("#fec"))
-                {
-                    yield return message.ReplyToChannel("`Hey!!! no cheating, watch your language`");
-               
+            if (message.RawText.ToLower().Contains("#fec"))
+            {
+                yield return message.ReplyToChannel("`Hey!!! no cheating, watch your language`");
+
             }
-                //Chirping when someone needs help
+            //Chirping when someone needs help
             if (message.RawText.ToLower().Contains("help"))
             {
                 var val_help = rand.Next(20);
@@ -246,8 +247,67 @@ namespace OrchidBot.Middleware
                     default:
                         break;
                 }
-
             }
+            //dont insult the bat!!
+            if ((message.BotIsMentioned && message.RawText.ToLower().Contains("retarded") && message.ChannelType == ResponseType.Channel) ||
+            (message.RawText.ToLower().Contains("retarded") && message.ChannelType == ResponseType.DirectMessage))
+            {
+                var val_sassy = rand.Next(7);
+                switch (val_sassy)
+                {
+                    case 0:
+                        yield return message.ReplyToChannel("Well well looky look a hero aren't you, IQ equivalent of sea trash");
+                        break;
+
+                    case 1:
+                        yield return message.ReplyToChannel("Hold that thought let me ask your mom quickly");
+                        break;
+
+                    case 2:
+                        yield return message.ReplyToChannel("No");
+                        break;
+
+                    case 3:
+                        yield return message.ReplyToChannel("I was trying to act like you today, so Yes");
+                        break;
+
+                    default:
+                        yield return message.ReplyToChannel("Just acting like you...");
+                        break;
+                }
+            }
+
+            if ((message.BotIsMentioned && message.RawText.ToLower().Contains("time") && message.ChannelType == ResponseType.Channel) ||
+            (message.RawText.ToLower().Contains("time") && message.ChannelType == ResponseType.DirectMessage))
+            {
+                var var_GetDate = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+                {
+                    yield return message.ReplyToChannel("Today is " + var_GetDate);
+                }
+            }
+
+            if ((message.BotIsMentioned && message.RawText.ToLower().Contains("thank you") && message.ChannelType == ResponseType.Channel) ||
+            (message.RawText.ToLower().Contains("thank you") && message.ChannelType == ResponseType.DirectMessage))
+            {
+                var val_polite = rand.Next(7);
+                switch (val_polite)
+                {
+                    case 0:
+                        yield return message.ReplyToChannel("it's a pleasure");
+                        break;
+
+                    case 1:
+                        yield return message.ReplyToChannel("You're Welcome");
+                        break;
+
+                    default:
+                        yield return message.ReplyToChannel(":smile:");
+                        break;
+                }
+            }
+
         }
     }
 }
+
+
