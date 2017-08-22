@@ -103,6 +103,11 @@ namespace OrchidBot.Middleware
                 yield return message.ReplyToChannel("`Hey!!! no cheating, watch your language`");
 
             }
+            if (message.RawText.ToLower().Contains("flock"))
+            {
+                yield return message.ReplyToChannel("`Hey!!! no cheating, watch your language`");
+
+            }
             //Chirping when someone needs help
             if (message.RawText.ToLower().Contains("help"))
             {
@@ -122,7 +127,7 @@ namespace OrchidBot.Middleware
                         break;
 
                     case 3:
-                        yield return message.ReplyToChannel("`Everyone needs this is Gotham!!!`");
+                        yield return message.ReplyToChannel("`Everyone needs help... this is Gotham!!!`");
                         break;
 
                     case 4:
